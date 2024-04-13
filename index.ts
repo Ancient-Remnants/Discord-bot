@@ -1,4 +1,4 @@
-import { ActivityType, Client, Collection, GatewayIntentBits, REST, Routes, Events, ChatInputCommandInteraction, CommandInteraction } from 'discord.js';
+import { ActivityType, Client, Collection, REST, Routes, Events, ChatInputCommandInteraction, CommandInteraction } from 'discord.js';
 import YAML from 'yaml'
 import fs from 'node:fs'
 import path from 'node:path'
