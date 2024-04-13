@@ -1,3 +1,4 @@
+import { ChatInputCommandInteraction } from "discord.js";
 import { CommandInteraction, SlashCommandBuilder } from "discord.js";
 
 module.exports = {
@@ -23,8 +24,12 @@ module.exports = {
                 })
             return group
         }),
-    async execute(interaction: CommandInteraction) {
-        // doing a  bit later
+    async execute(interaction: ChatInputCommandInteraction) {
+        let cmd = {
+            group: interaction.options.getSubcommandGroup(true),
+            sub: interaction.options.getSubcommand(true)
+        }
+
         await interaction.reply({ ephemeral: true, content: "ok" })
     },
 };
