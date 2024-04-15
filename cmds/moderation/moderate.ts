@@ -1,5 +1,7 @@
-import { ChatInputCommandInteraction } from "discord.js";
-import { CommandInteraction, SlashCommandBuilder } from "discord.js";
+import { ChatInputCommandInteraction, EmbedBuilder } from "discord.js";
+import { SlashCommandBuilder } from "discord.js";
+import { BuildEmbed } from "../../utilities/embed";
+
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -30,6 +32,11 @@ module.exports = {
             sub: interaction.options.getSubcommand(true)
         }
 
-        await interaction.reply({ ephemeral: true, content: "ok" })
+        switch (cmd.group) {
+            case "user":
+            default:
+                
+        }
+
     },
 };

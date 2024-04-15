@@ -16,6 +16,8 @@ const client = new Client({
     ]
 });
 
+client.config = CONFIG
+
 Connect(CONFIG.db.connURI)
     .then((ctx) => {
         client.db = ctx // db conn
@@ -61,9 +63,9 @@ for (let i = 0; i < cmds.length; i++) {
 }
 
 const rest = new REST().setToken(CONFIG.bot.token);
-const payload = client.commands.map((v, k, coll) => (v as any).data.toJSON())
+const payload = client.commands.map((v, k, coll) => (v as any).data.toJSON());
 
-console.log(payload);
+// console.log(payload);
 
 (async () => {
     console.log(`Started refreshing ${client.commands.size} application (/) commands.`);
