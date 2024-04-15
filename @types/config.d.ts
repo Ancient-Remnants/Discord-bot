@@ -8,5 +8,6 @@ export interface YamlConfig {
     },
     environment: {
         runtime: string
-    }
+    },
+    discord_default_embed: { [key: string]: string }
 }
